@@ -1,20 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Animal from '../Animal';
 
-const AnimalList = ({zvire, select}) => {
+const AnimalList = ({animalsList}) => {
+   const [selectedAnimalId, setSelectedAnimalId] = useState('')
+   const selectAnimal = (id) => {
+     setSelectedAnimalId(id)
+   };
    
 	return (
-<div className="animal-list">
 
-            <li>
-            onClick={()=> {select(zvire.id)}}
+<>
+<div className="animal-list">
+<li onClick={()=> {selectAnimal(selectedAnimalId)}}>
+               {animalsList.map (animal =>
                <Animal  
-               nazev={zvire.nazev}
-               nazevLatinsky={zvire.nazevLatinsky} 
-               foto={zvire.foto}/>
-            </li>
+               nazev={animal.nazev}
+               nazevLatinsky={animal.nazevLatinsky} 
+               foto={animal.foto}/>
+               )}
+</li>
 </div>
+</>
 )
 };
 
