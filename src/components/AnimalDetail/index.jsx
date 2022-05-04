@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-const AnimalDetail = ({selectedAnimal, foto, nazev, nazevLatinsky, popis, domovina, biotop, potrava, velikost, zoo}) => {
+const AnimalDetail = ({selectedAnimalId, foto, nazev, nazevLatinsky, popis, domovina, biotop, potrava, velikost, zoo}) => {
 
 	return (
 <>
@@ -10,7 +10,7 @@ const AnimalDetail = ({selectedAnimal, foto, nazev, nazevLatinsky, popis, domovi
 				<div className="detail__header">
 					<img className="detail__image" src={foto} alt={nazev} />
 					<div className="detail__title">
-						<h2 className="detail__name"><span>{selectedAnimal}</span></h2>
+						<h2 className="detail__name"><span>{selectedAnimalId}</span></h2>
 						<div className="detail__latin"><span>{nazevLatinsky}</span></div>
 					</div>
 				</div>

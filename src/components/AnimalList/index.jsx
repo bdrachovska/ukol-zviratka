@@ -14,7 +14,8 @@ const AnimalList = ({animalsList}) => {
 <div className="animal-list">
 <li onClick={()=> {selectAnimal(selectedAnimalId)}}>
                {animalsList.map (animal =>
-               <Animal  
+               <Animal
+               key={animal.id}
                nazev={animal.nazev}
                nazevLatinsky={animal.nazevLatinsky} 
                foto={animal.foto}/>

@@ -12,6 +12,7 @@ const App = () => {
   const selectAnimal = (id) => {
     setSelectedAnimalId(id)
   };
+
   
 
   useEffect(() => {
@@ -29,7 +30,7 @@ const App = () => {
       <h1>Zvířátka v ZOO</h1>
       <div className="container">
         <AnimalList animalsList={animals} select={selectAnimal}/>
-        <AnimalDetail selectedAnimal={selectedAnimalId}/>
+        <AnimalDetail selectedAnimalId={selectedAnimalId}/>
       </div>
     </>
   );
