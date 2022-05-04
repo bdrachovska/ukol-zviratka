@@ -1,11 +1,11 @@
 import React from 'react';
 import './style.css';
 
-const Animal = ({foto, nazev, nazevLatinsky}) => {
+const Animal = ({selectAnimal, id, onSelect, foto, nazev, nazevLatinsky}) => {
 
 	return (
 <>
-<div className="animal">
+<div className="animal" onClick={()=> {selectAnimal(onSelect(id))}}>
 				<div className="animal__image">
 					<img src={foto} alt={nazev} />
 				</div>

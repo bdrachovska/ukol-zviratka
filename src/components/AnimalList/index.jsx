@@ -12,7 +12,7 @@ const AnimalList = ({animalsList}) => {
 
 <>
 <div className="animal-list">
-<li onClick={()=> {selectAnimal(selectedAnimalId)}}>
+<li onClick={()=> {selectAnimal(onSelect(id))}}>
                {animalsList.map (animal =>
                <Animal
                key={animal.id}
