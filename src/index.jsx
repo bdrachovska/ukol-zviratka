@@ -8,18 +8,25 @@ import AnimalDetail from './components/AnimalDetail';
 const App = () => {
 
   const [animals, setAnimals] = useState([]);
-  const [selectedAnimalId, setSelectedAnimalId] = useState('')
+  const [selectedAnimalId, setSelectedAnimalId] = useState('');
   const selectAnimal = (id) => {
     setSelectedAnimalId(id)
   };
 
+
+
+  //const [firstAnimal, setFirstAnimal] =useState([0]);
   
+  //const firstAnimalDetail = (id) => {
+  //  setFirstAnimal(id)
+  //}
 
   useEffect(() => {
     fetch(`https://lrolecek.github.io/zviratka-api/zvirata.json`)
       .then((response) => response.json())
       .then((data) => {
       setAnimals(data.zvirata);
+      setSelectedAnimalId(data.zvirata[0])
     }
       )
   }, []);
