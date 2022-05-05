@@ -14,13 +14,6 @@ const App = () => {
   };
 
 
-
-  //const [firstAnimal, setFirstAnimal] =useState([0]);
-  
-  //const firstAnimalDetail = (id) => {
-  //  setFirstAnimal(id)
-  //}
-
   useEffect(() => {
     fetch(`https://lrolecek.github.io/zviratka-api/zvirata.json`)
       .then((response) => response.json())

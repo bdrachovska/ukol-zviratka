@@ -8,7 +8,7 @@ const AnimalDetail = ({selectedAnimalId, foto, nazev, nazevLatinsky, popis, domo
 <div className="detail">
 			<div className="detail__content">
 				<div className="detail__header">
-					<img className="detail__image" src={selectedAnimalId.foto} alt={nazev} />
+					<img className="detail__image" src={selectedAnimalId.foto} alt={selectedAnimalId.nazev} />
 					<div className="detail__title">
 						<h2 className="detail__name"><span>{selectedAnimalId.nazev}</span></h2>
 						<div className="detail__latin"><span>{selectedAnimalId.nazevLatinsky}</span></div>
