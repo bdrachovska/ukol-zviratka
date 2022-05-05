@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 
 import Animal from '../Animal';
 
-const AnimalList = ({animalsList, select}) => {
-
+const AnimalList = ({animalsList, selectAnimal}) => {
    
 	return (
 
@@ -16,7 +15,7 @@ const AnimalList = ({animalsList, select}) => {
                nazev={animal.nazev}
                nazevLatinsky={animal.nazevLatinsky} 
                foto={animal.foto}
-               onSelect={select}/>
+               selectFn={selectAnimal}/>
                )}
 </li>
 </div>

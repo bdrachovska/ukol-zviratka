@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-const AnimalDetail = ({selectedAnimalId, foto, nazev, nazevLatinsky, popis, domovina, biotop, potrava, velikost, zoo}) => {
+const AnimalDetail = ({selectedAnimalId}) => {
 
 	return (
 <>
