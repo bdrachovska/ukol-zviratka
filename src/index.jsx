@@ -8,7 +8,7 @@ import AnimalDetail from './components/AnimalDetail';
 const App = () => {
 
   const [animals, setAnimals] = useState([]);
-  const [selectedAnimalId, setSelectedAnimalId] = useState('');
+  const [selectedAnimalId, setSelectedAnimalId] = useState({});
   const selectAnimal = (id) => {
     setSelectedAnimalId(id)
   };
@@ -29,8 +29,8 @@ const App = () => {
     <>
       <h1>Zvířátka v ZOO</h1>
       <div className="container">
-        <AnimalList animalsList={animals} select={selectAnimal}/>
-        <AnimalDetail selectedAnimalId={selectedAnimalId}/>
+        <AnimalList animals={animals} select={selectAnimal}/>
+        <AnimalDetail animals={animals} selectedAnimalId={selectedAnimalId}/>
       </div>
     </>
   );

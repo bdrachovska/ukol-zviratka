@@ -2,22 +2,21 @@ import React, { useState } from 'react';
 
 import Animal from '../Animal';
 
-const AnimalList = ({animalsList, selectAnimal}) => {
+const AnimalList = ({animals, select}) => {
    
 	return (
 
 <>
 <div className="animal-list">
-<li>
-               {animalsList.map (animal =>
+               {animals.map ((animal) => (
+               <ul onClick={()=>{select(animal)}}>
                <Animal
                key={animal.id}
                nazev={animal.nazev}
                nazevLatinsky={animal.nazevLatinsky} 
-               foto={animal.foto}
-               selectFn={selectAnimal}/>
-               )}
-</li>
+               foto={animal.foto}/>
+               </ul>
+               ))}
 </div>
 </>
 )
